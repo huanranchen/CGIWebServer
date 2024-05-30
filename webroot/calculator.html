@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .calculator input {
+            width: calc(50% - 10px);
+            height: 40px;
+            font-size: 1.5em;
+            margin: 5px;
+            text-align: center;
+        }
+        .calculator button {
+            width: calc(50% - 10px);
+            height: 40px;
+            font-size: 1.5em;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <form action="/cgi-bin/calculator.py" method="post">
+            <input type="number" name="num1" placeholder="Number 1" required>
+            <input type="number" name="num2" placeholder="Number 2" required>
+            <br>
+            <button type="submit" name="operation" value="sum">Sum</button>
+            <button type="submit" name="operation" value="product">Product</button>
+        </form>
+    </div>
+</body>
+</html>

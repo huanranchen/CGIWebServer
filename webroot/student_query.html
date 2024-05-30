@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Query</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .query-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .query-form input {
+            width: calc(100% - 20px);
+            height: 40px;
+            font-size: 1.5em;
+            margin: 5px 0;
+            text-align: center;
+        }
+        .query-form button {
+            width: calc(100% - 20px);
+            height: 40px;
+            font-size: 1.5em;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="query-form">
+        <form action="/cgi-bin/student_query.py" method="post">
+            <input type="text" name="student_id" placeholder="Enter Student ID" required>
+            <button type="submit">Query</button>
+        </form>
+    </div>
+</body>
+</html>
